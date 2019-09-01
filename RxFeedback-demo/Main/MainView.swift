@@ -6,15 +6,15 @@ import UIKit
 import SnapKit
 
 final class MainView: BaseView {
-    private let myPitchLabel = setup(UILabel()) {
+    let playerPitchLabel = setup(UILabel()) {
         $0.textColor = .white
     }
     
-    private let machinePitchLabel = setup(UILabel()) {
+    let machinePitchLabel = setup(UILabel()) {
         $0.textColor = .white
     }
     
-    private let pitchButton = setup(UIButton(type: .system)) {
+    let pitchButton = setup(UIButton(type: .system)) {
         $0.setTitle("Make Pitch", for: .normal)
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = UIFont.systemFont(ofSize: 17)
@@ -35,7 +35,7 @@ final class MainView: BaseView {
         )
         
         topFieldBackgroundView.addSubviews(
-            myPitchLabel,
+            playerPitchLabel,
             pitchButton
         )
         
@@ -55,7 +55,7 @@ final class MainView: BaseView {
             make.center.equalToSuperview()
         }
         
-        myPitchLabel.snp.makeConstraints { make in
+        playerPitchLabel.snp.makeConstraints { make in
             make.bottom.equalTo(topFieldBackgroundView.snp.centerY)
             make.centerX.equalToSuperview()
         }
