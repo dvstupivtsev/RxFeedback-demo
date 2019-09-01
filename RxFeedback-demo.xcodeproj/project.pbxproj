@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF21434B231C1D8D007D68E8 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FF21434A231C1D8D007D68E8 /* SnapKit */; };
+		FF214350231C1E1F007D68E8 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FF21434F231C1E1F007D68E8 /* RxSwift */; };
+		FF214352231C1E1F007D68E8 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FF214351231C1E1F007D68E8 /* RxCocoa */; };
+		FF214355231C1E6F007D68E8 /* RxFeedback in Frameworks */ = {isa = PBXBuildFile; productRef = FF214354231C1E6F007D68E8 /* RxFeedback */; };
+		FF214358231C1FB8007D68E8 /* Weakify in Frameworks */ = {isa = PBXBuildFile; productRef = FF214357231C1FB8007D68E8 /* Weakify */; };
 		FF91A606231C00A300044012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91A605231C00A300044012 /* AppDelegate.swift */; };
 		FF91A608231C00A300044012 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91A607231C00A300044012 /* MainViewController.swift */; };
 		FF91A60D231C00A400044012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF91A60C231C00A400044012 /* Assets.xcassets */; };
@@ -41,6 +46,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF214350231C1E1F007D68E8 /* RxSwift in Frameworks */,
+				FF214352231C1E1F007D68E8 /* RxCocoa in Frameworks */,
+				FF214358231C1FB8007D68E8 /* Weakify in Frameworks */,
+				FF21434B231C1D8D007D68E8 /* SnapKit in Frameworks */,
+				FF214355231C1E6F007D68E8 /* RxFeedback in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +135,13 @@
 			dependencies = (
 			);
 			name = "RxFeedback-demo";
+			packageProductDependencies = (
+				FF21434A231C1D8D007D68E8 /* SnapKit */,
+				FF21434F231C1E1F007D68E8 /* RxSwift */,
+				FF214351231C1E1F007D68E8 /* RxCocoa */,
+				FF214354231C1E6F007D68E8 /* RxFeedback */,
+				FF214357231C1FB8007D68E8 /* Weakify */,
+			);
 			productName = "RxFeedback-demo";
 			productReference = FF91A602231C00A300044012 /* RxFeedback-demo.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +192,12 @@
 				Base,
 			);
 			mainGroup = FF91A5F9231C00A300044012;
+			packageReferences = (
+				FF214349231C1D8D007D68E8 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FF21434C231C1E1F007D68E8 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				FF214353231C1E6F007D68E8 /* XCRemoteSwiftPackageReference "RxFeedback" */,
+				FF214356231C1FB8007D68E8 /* XCRemoteSwiftPackageReference "Weakify" */,
+			);
 			productRefGroup = FF91A603231C00A300044012 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -469,6 +492,69 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FF214349231C1D8D007D68E8 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		FF21434C231C1E1F007D68E8 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+		FF214353231C1E6F007D68E8 /* XCRemoteSwiftPackageReference "RxFeedback" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/NoTests/RxFeedback.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		FF214356231C1FB8007D68E8 /* XCRemoteSwiftPackageReference "Weakify" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/klundberg/Weakify";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FF21434A231C1D8D007D68E8 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF214349231C1D8D007D68E8 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		FF21434F231C1E1F007D68E8 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF21434C231C1E1F007D68E8 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		FF214351231C1E1F007D68E8 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF21434C231C1E1F007D68E8 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		FF214354231C1E6F007D68E8 /* RxFeedback */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF214353231C1E6F007D68E8 /* XCRemoteSwiftPackageReference "RxFeedback" */;
+			productName = RxFeedback;
+		};
+		FF214357231C1FB8007D68E8 /* Weakify */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF214356231C1FB8007D68E8 /* XCRemoteSwiftPackageReference "Weakify" */;
+			productName = Weakify;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FF91A5FA231C00A300044012 /* Project object */;
 }
