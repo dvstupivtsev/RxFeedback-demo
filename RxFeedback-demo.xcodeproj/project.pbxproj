@@ -22,6 +22,8 @@
 		FF91A631231C0C1D00044012 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91A630231C0C1D00044012 /* MainView.swift */; };
 		FF91A634231C0D1D00044012 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91A633231C0D1D00044012 /* Functions.swift */; };
 		FF91A637231C0EE400044012 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91A636231C0EE400044012 /* UIView+Extension.swift */; };
+		FFCE5000231C33CF002C4F4C /* Overture in Frameworks */ = {isa = PBXBuildFile; productRef = FFCE4FFF231C33CF002C4F4C /* Overture */; };
+		FFCE5003231C33E6002C4F4C /* Prelude in Frameworks */ = {isa = PBXBuildFile; productRef = FFCE5002231C33E6002C4F4C /* Prelude */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 			files = (
 				FF214350231C1E1F007D68E8 /* RxSwift in Frameworks */,
 				FF214352231C1E1F007D68E8 /* RxCocoa in Frameworks */,
+				FFCE5003231C33E6002C4F4C /* Prelude in Frameworks */,
+				FFCE5000231C33CF002C4F4C /* Overture in Frameworks */,
 				FF214358231C1FB8007D68E8 /* Weakify in Frameworks */,
 				FF21434B231C1D8D007D68E8 /* SnapKit in Frameworks */,
 				FF214355231C1E6F007D68E8 /* RxFeedback in Frameworks */,
@@ -180,6 +184,8 @@
 				FF214351231C1E1F007D68E8 /* RxCocoa */,
 				FF214354231C1E6F007D68E8 /* RxFeedback */,
 				FF214357231C1FB8007D68E8 /* Weakify */,
+				FFCE4FFF231C33CF002C4F4C /* Overture */,
+				FFCE5002231C33E6002C4F4C /* Prelude */,
 			);
 			productName = "RxFeedback-demo";
 			productReference = FF91A602231C00A300044012 /* RxFeedback-demo.app */;
@@ -236,6 +242,8 @@
 				FF21434C231C1E1F007D68E8 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				FF214353231C1E6F007D68E8 /* XCRemoteSwiftPackageReference "RxFeedback" */,
 				FF214356231C1FB8007D68E8 /* XCRemoteSwiftPackageReference "Weakify" */,
+				FFCE4FFE231C33CF002C4F4C /* XCRemoteSwiftPackageReference "swift-overture" */,
+				FFCE5001231C33E6002C4F4C /* XCRemoteSwiftPackageReference "swift-prelude" */,
 			);
 			productRefGroup = FF91A603231C00A300044012 /* Products */;
 			projectDirPath = "";
@@ -570,6 +578,22 @@
 				minimumVersion = 0.5.0;
 			};
 		};
+		FFCE4FFE231C33CF002C4F4C /* XCRemoteSwiftPackageReference "swift-overture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-overture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+		FFCE5001231C33E6002C4F4C /* XCRemoteSwiftPackageReference "swift-prelude" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-prelude";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -597,6 +621,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FF214356231C1FB8007D68E8 /* XCRemoteSwiftPackageReference "Weakify" */;
 			productName = Weakify;
+		};
+		FFCE4FFF231C33CF002C4F4C /* Overture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFCE4FFE231C33CF002C4F4C /* XCRemoteSwiftPackageReference "swift-overture" */;
+			productName = Overture;
+		};
+		FFCE5002231C33E6002C4F4C /* Prelude */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFCE5001231C33E6002C4F4C /* XCRemoteSwiftPackageReference "swift-prelude" */;
+			productName = Prelude;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
