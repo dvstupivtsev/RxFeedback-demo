@@ -6,7 +6,7 @@ import UIKit
 
 struct WindowRouter {
     func setup(window: UIWindow) {
-        window.rootViewController = MainViewController()
+        window.rootViewController = MainViewController(viewModel: MainScreen.make())
         window.makeKeyAndVisible()
     }
 }

@@ -12,6 +12,8 @@
 		FF214352231C1E1F007D68E8 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = FF214351231C1E1F007D68E8 /* RxCocoa */; };
 		FF214355231C1E6F007D68E8 /* RxFeedback in Frameworks */ = {isa = PBXBuildFile; productRef = FF214354231C1E6F007D68E8 /* RxFeedback */; };
 		FF214358231C1FB8007D68E8 /* Weakify in Frameworks */ = {isa = PBXBuildFile; productRef = FF214357231C1FB8007D68E8 /* Weakify */; };
+		FF2E9D33231EEEA400992269 /* MainScreenIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2E9D32231EEEA400992269 /* MainScreenIO.swift */; };
+		FF302A46231EE995009951E5 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF302A45231EE995009951E5 /* MainScreen.swift */; };
 		FF91A606231C00A300044012 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91A605231C00A300044012 /* AppDelegate.swift */; };
 		FF91A608231C00A300044012 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF91A607231C00A300044012 /* MainViewController.swift */; };
 		FF91A60D231C00A400044012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF91A60C231C00A400044012 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF2E9D32231EEEA400992269 /* MainScreenIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenIO.swift; sourceTree = "<group>"; };
+		FF302A45231EE995009951E5 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		FF91A602231C00A300044012 /* RxFeedback-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RxFeedback-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF91A605231C00A300044012 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF91A607231C00A300044012 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 			children = (
 				FF91A607231C00A300044012 /* MainViewController.swift */,
 				FF91A630231C0C1D00044012 /* MainView.swift */,
+				FF302A45231EE995009951E5 /* MainScreen.swift */,
+				FF2E9D32231EEEA400992269 /* MainScreenIO.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -277,10 +283,12 @@
 			files = (
 				FF91A62E231C0BDB00044012 /* BaseViewController.swift in Sources */,
 				FF91A631231C0C1D00044012 /* MainView.swift in Sources */,
+				FF2E9D33231EEEA400992269 /* MainScreenIO.swift in Sources */,
 				FF91A637231C0EE400044012 /* UIView+Extension.swift in Sources */,
 				FF91A608231C00A300044012 /* MainViewController.swift in Sources */,
 				FF91A634231C0D1D00044012 /* Functions.swift in Sources */,
 				FF91A627231C03EF00044012 /* WindowRouter.swift in Sources */,
+				FF302A46231EE995009951E5 /* MainScreen.swift in Sources */,
 				FF91A606231C00A300044012 /* AppDelegate.swift in Sources */,
 				FF91A62C231C0BBB00044012 /* BaseView.swift in Sources */,
 			);

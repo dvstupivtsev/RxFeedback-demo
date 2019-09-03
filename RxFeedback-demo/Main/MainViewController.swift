@@ -4,90 +4,45 @@
 
 import UIKit
 import RxSwift
-import RxFeedback
+import RxCocoa
 
 final class MainViewController: BaseViewController<MainView> {
+    private let _viewModel: MainScreen.ViewModel
     private let _bag = DisposeBag()
+    
+    init(viewModel: @escaping MainScreen.ViewModel) {
+        _viewModel = viewModel
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Observable.system(
-            initialState: State.playersPitch,
-            reduce: { (state: State, event: Event) -> State in
-                switch event {
-                case .throwToMachine:
-                    return .machinesPitch
-                case .throwToPlayer:
-                    return .playersPitch
-                }
-            },
-            scheduler: MainScheduler.instance,
-            feedback: [
-                makeUIBindings(),
-                react(request: { $0.machinePitching }, effects: { _ in
-                    Observable<Int>
-                        .timer(.seconds(1), scheduler: MainScheduler.instance)
-                        .map { _ in Event.throwToPlayer }
-                })
-            ]
-        )
-        .subscribe()
-        .disposed(by: _bag)
-    }
-    
-    private func makeUIBindings() -> System {
-        return bind(self) { _self, state in
-            return Bindings<Event>.init(
-                subscriptions: [
-                    state.map { $0.playersTitle }.bind(to: _self.customView.playerPitchLabel.rx.text),
-                    state.map { $0.machinesTitle }.bind(to: _self.customView.machinePitchLabel.rx.text),
-                    state.map { $0 == .machinesPitch }.bind(to: _self.customView.pitchButton.rx.isHidden)
-                ],
-                events: [
-                    _self.customView.pitchButton.rx.tap.map { Event.throwToMachine }
-                ]
-            )
-        }
+        _viewModel(self)
+            .subscribe()
+            .disposed(by: _bag)
     }
 }
 
-extension MainViewController {
-    typealias System = (ObservableSchedulerContext<State>) -> Observable<Event>
-    
-    enum State {
-        case playersPitch
-        case machinesPitch
+extension MainViewController: MainScreenIO {
+    var playerPitchText: Binder<String?> {
+        return customView.playerPitchLabel.rx.text
     }
     
-    enum Event {
-        case throwToMachine
-        case throwToPlayer
+    var machinePitchText: Binder<String?> {
+        return customView.machinePitchLabel.rx.text
     }
     
-    fileprivate struct PitchRequest: Equatable {}
-}
-
-extension MainViewController.State {
-    var playersTitle: String? {
-        switch self {
-        case .playersPitch:
-            return "I have the 🏈"
-        case .machinesPitch:
-            return "I'm ready, hit me"
-        }
+    var pitchButtonHidden: Binder<Bool> {
+        return customView.pitchButton.rx.isHidden
     }
     
-    var machinesTitle: String? {
-        switch self {
-        case .playersPitch:
-            return "I'm ready, hit me"
-        case .machinesPitch:
-            return "I have the 🏈"
-        }
-    }
-
-    fileprivate var machinePitching: MainViewController.PitchRequest? {
-        return self == .machinesPitch ? MainViewController.PitchRequest() : nil
+    var pitchButtonTap: ControlEvent<Void> {
+        return customView.pitchButton.rx.tap
     }
 }
