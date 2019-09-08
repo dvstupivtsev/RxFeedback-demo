@@ -30,19 +30,19 @@ final class MainViewController: BaseViewController<MainView> {
 }
 
 extension MainViewController: MainScreenIO {
-    var playerPitchText: Binder<String?> {
-        return customView.playerPitchLabel.rx.text
+    var playerPitchText: AnyObserver<String?> {
+        return customView.playerPitchLabel.rx.text.asObserver()
     }
     
-    var machinePitchText: Binder<String?> {
-        return customView.machinePitchLabel.rx.text
+    var machinePitchText: AnyObserver<String?> {
+        return customView.machinePitchLabel.rx.text.asObserver()
     }
     
-    var pitchButtonHidden: Binder<Bool> {
-        return customView.pitchButton.rx.isHidden
+    var pitchButtonHidden: AnyObserver<Bool> {
+        return customView.pitchButton.rx.isHidden.asObserver()
     }
     
-    var pitchButtonTap: ControlEvent<Void> {
-        return customView.pitchButton.rx.tap
+    var pitchButtonTap: Observable<Void> {
+        return customView.pitchButton.rx.tap.asObservable()
     }
 }

@@ -20,7 +20,8 @@
 		FF35041A2324F51900AE6A15 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3504192324F51900AE6A15 /* MainScreen.swift */; };
 		FF35041C2324F52700AE6A15 /* MainScreenIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35041B2324F52700AE6A15 /* MainScreenIO.swift */; };
 		FF35041E2324F6DB00AE6A15 /* RxFeedbackDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35041D2324F6DB00AE6A15 /* RxFeedbackDemoUITests.swift */; };
-		FF3504202324F70600AE6A15 /* RxFeedbackDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35041F2324F70600AE6A15 /* RxFeedbackDemoTests.swift */; };
+		FF3504202324F70600AE6A15 /* MainScreenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF35041F2324F70600AE6A15 /* MainScreenTests.swift */; };
+		FF3504222324FFF700AE6A15 /* MainScreenIOMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3504212324FFF700AE6A15 /* MainScreenIOMock.swift */; };
 		FF590BDE2324F1390066A4A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF590BDD2324F1390066A4A1 /* AppDelegate.swift */; };
 		FF590BE52324F13A0066A4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF590BE42324F13A0066A4A1 /* Assets.xcassets */; };
 		FF590BE82324F13A0066A4A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF590BE62324F13A0066A4A1 /* LaunchScreen.storyboard */; };
@@ -63,7 +64,8 @@
 		FF3504192324F51900AE6A15 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		FF35041B2324F52700AE6A15 /* MainScreenIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenIO.swift; sourceTree = "<group>"; };
 		FF35041D2324F6DB00AE6A15 /* RxFeedbackDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFeedbackDemoUITests.swift; sourceTree = "<group>"; };
-		FF35041F2324F70600AE6A15 /* RxFeedbackDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxFeedbackDemoTests.swift; sourceTree = "<group>"; };
+		FF35041F2324F70600AE6A15 /* MainScreenTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTests.swift; sourceTree = "<group>"; };
+		FF3504212324FFF700AE6A15 /* MainScreenIOMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenIOMock.swift; sourceTree = "<group>"; };
 		FF590BDA2324F1390066A4A1 /* RxFeedbackDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxFeedbackDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF590BDD2324F1390066A4A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF590BE42324F13A0066A4A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -219,7 +221,8 @@
 		FF590BF12324F13A0066A4A1 /* RxFeedbackDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				FF35041F2324F70600AE6A15 /* RxFeedbackDemoTests.swift */,
+				FF35041F2324F70600AE6A15 /* MainScreenTests.swift */,
+				FF3504212324FFF700AE6A15 /* MainScreenIOMock.swift */,
 				FF590BF42324F13A0066A4A1 /* Info.plist */,
 			);
 			path = RxFeedbackDemoTests;
@@ -473,7 +476,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3504202324F70600AE6A15 /* RxFeedbackDemoTests.swift in Sources */,
+				FF3504222324FFF700AE6A15 /* MainScreenIOMock.swift in Sources */,
+				FF3504202324F70600AE6A15 /* MainScreenTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

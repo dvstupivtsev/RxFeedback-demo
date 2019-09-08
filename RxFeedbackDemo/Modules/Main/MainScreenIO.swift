@@ -3,11 +3,11 @@
 //
 
 import Foundation
-import RxCocoa
+import RxSwift
 
 protocol MainScreenIO {
-    var playerPitchText: Binder<String?> { get }
-    var machinePitchText: Binder<String?> { get }
-    var pitchButtonHidden: Binder<Bool> { get }
-    var pitchButtonTap: ControlEvent<Void> { get }
+    var playerPitchText: AnyObserver<String?> { get }
+    var machinePitchText: AnyObserver<String?> { get }
+    var pitchButtonHidden: AnyObserver<Bool> { get }
+    var pitchButtonTap: Observable<Void> { get }
 }

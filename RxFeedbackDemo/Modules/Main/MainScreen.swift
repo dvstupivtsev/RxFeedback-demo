@@ -10,7 +10,7 @@ import RxFeedback
 enum MainScreen {
     typealias ViewModel = (_ io: MainScreenIO) -> Observable<State>
     
-    static func make() -> ViewModel {
+    static func make(scheduler: SchedulerType = MainScheduler.instance) -> ViewModel {
         return { io in
             Observable.system(
                 initialState: State.playersPitch,
@@ -22,7 +22,7 @@ enum MainScreen {
                         return .playersPitch
                     }
                 },
-                scheduler: MainScheduler.instance,
+                scheduler: scheduler,
                 feedback: [
                     bind { state in
                         return Bindings<Event>(
@@ -38,7 +38,7 @@ enum MainScreen {
                     },
                     react(request: { $0.machinePitching }, effects: { _ in
                         Observable<Int>
-                            .timer(.seconds(1), scheduler: MainScheduler.instance)
+                            .timer(.seconds(1), scheduler: scheduler)
                             .map { _ in Event.throwToPlayer }
                     })
                 ]
