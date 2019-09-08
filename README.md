@@ -1,2 +1,2 @@
-# RxFeedback-demo
+# RxFeedbackDemo
 RxFeedback demo project
